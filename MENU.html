@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> José Trinidad Cabañas</title>
+
+<link rel="stylesheet" href="estilos_MENU.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+<!-- PANTALLA DE CARGA -->
+<div id="loader">
+    <div class="spinner"></div>
+    <h2>Cargando Pagina José Trinidad Cabañas...</h2></div>
+
+<!-- VIDEO -->
+<video autoplay muted loop id="videoFondo">
+    <source src="VideoDoc.mp4" type="video/mp4">
+</video>
+
+<div class="overlay">
+
+<header>
+    <img src="logo2.png" class="logo">
+    <h1> José Trinidad Cabañas</h1>
+    <p>Trabajo • Estudio • Disciplina</p>
+</header>
+
+<nav>
+<ul class="menu">
+
+<li><a href="#" onclick="mostrar('inicio')"><i class="fa fa-home"></i> Inicio</a></li>
+
+
+<li>
+<a href="#"><i class="fa fa-users"></i> Quiénes Somos ▼</a>
+<ul class="submenu">
+<li><a href="#" onclick="mostrar('Informacion')">Información</a></li>
+<li><a href="#" onclick="mostrar('Estructura')">Estructura</a></li>
+<li><a href="#" onclick="mostrar('Fundador')">Fundador</a></li>
+</ul>
+</li>
+
+<li>
+<a href="#"><i class="fa fa-tools"></i> Áreas ▼</a>
+<ul class="submenu">
+<li><a href="#" onclick="mostrar('madera')">Madera</a></li>
+<li><a href="#" onclick="mostrar('electricidad')">Electricidad</a></li>
+<li><a href="#" onclick="mostrar('hogar')">Hogar</a></li>
+<li><a href="#" onclick="mostrar('estructura')">Estructura</a></li>
+</ul>
+</li>
+
+<li>
+<a href="#"><i class="fa fa-graduation-cap"></i> Carreras ▼</a>
+<ul class="submenu">
+<li><a href="#" onclick="mostrar('informatica')">Informática</a></li>
+<li><a href="#" onclick="mostrar('finanzas')">Finanzas</a></li>
+<li><a href="#" onclick="mostrar('bch')">BCH</a></li>
+<li><a href="#" onclick="mostrar('electricidadc')">Electricidad</a></li>
+<li><a href="#" onclick="mostrar('madurez')">BCH por Madurez</a></li>
+</ul>
+</li>
+
+<li>
+<a href="#"><i class="fa fa-clock"></i> Jornadas ▼</a>
+<ul class="submenu">
+<li><a href="#" onclick="mostrar('matutina')">Matutina</a></li>
+<li><a href="#" onclick="mostrar('vespertina')">Vespertina</a></li>
+<li><a href="#" onclick="mostrar('nocturna')">Nocturna</a></li>
+<li><a href="#" onclick="mostrar('isemed')">ISEMED</a></li>
+</ul>
+</li>
+
+<li>
+<a href="#"><i class="fa fa-chalkboard-user"></i> Docentes ▼</a>
+<ul class="submenu">
+<li><a href="#" onclick="mostrar('docentes')">Información</a></li>
+</ul>
+</li>
+
+</ul>
+</nav>
+
+<!-- CONTENIDO -->
+<section id="contenido">
+<h2>Bienvenidos</h2>
+<p>Seleccione una opción del menú.</p>
+</section>
+
+<!-- CONTADOR -->
+<section class="contador">
+<div><h2 id="num1">0</h2><p>Estudiantes</p></div>
+<div><h2 id="num2">0</h2><p>Docentes</p></div>
+<div><h2 id="num3">0</h2><p>Carreras</p></div>
+</section>
+
+<!-- BOTON -->
+<a href="https://www.facebook.com/people/Instituto-Caba%C3%B1as-Olanchito/61577918134621/?sk=photos" target="_blank" class="facebook">
+   <i class="fab fa-facebook-f"></i>
+</a>
+
+<footer>
+© 2026 Colegio José Trinidad Cabañas
+</footer>
+
+</div>
+
+<script>
+window.onload=function(){
+setTimeout(()=>{
+document.getElementById("loader").style.display="none";
+},2000);
+}
+
+function mostrar(opcion){
+
+const datos={
+inicio:`<div class='card'>
+<div class='slider'>
+    <div style="display: flex; gap: 2cm; flex-wrap: wrap;"> 
+    <img src='INI.jpg'>
+<img src='INIC.jpg'>
+<img src='https://scontent.ftji1-1.fna.fbcdn.net/v/t1.6435-9/102382691_125768649144622_7416871364972066447_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=cf85f3&_nc_ohc=vOsbJuG9_gQQ7kNvwFsFMoa&_nc_oc=AdrB3D0el7CneVEktwaYK8XmXit_K2lDYNeFkd0Yn9yJUa2G7WWPYahAATXMIqqkAJA&_nc_zt=23&_nc_ht=scontent.ftji1-1.fna&_nc_gid=BA98u42VOWe23ivkLSpm5g&_nc_ss=7b289&oh=00_Af5oOMmt3qAiQVsIRqDSrYLs0bxGrdf9ZOwhkF00DowPFw&oe=6A39FD41'>
+    </div><br><br>
+<h2>Misión</h2>
+<p>Somos una Institución Educativa comprometida a inculcar los  valores morales, culturales e intelectuales para formar hombres y mujeres de bien, capaces de contribuir al desarrollo de nuestro país con una formación en las diferentes áreas de Ciclo Básico Técnico, Bachillerato técnico en computación, Educación Comercial</p> <br><br>
+<h2>Vision</h2> 
+<p>Ser una institución educativa líder, formando jóvenes capaces de poner en práctica los conocimientos técnicos y científicos  en la vida laboral y social.</p>
+</div>`,
+Informacion:`<div class='card'>
+    <div style="display: flex; gap: 2cm; flex-wrap: wrap;"> 
+<img src='INFO.jpg'>
+<img src='INFOO.jpg'>
+<img src='INFO1.jpg'>
+</div> <br><br>
+<h2>Quiénes Somos</h2>
+<p>Historia</p>
+<p align="justify">El Instituto Oficial Nocturno “José Trinidad Cabañas” fue fundado en 1968 por el profesor Ramón Durán Hernández con el propósito de brindar oportunidades de estudio a las personas que no podían asistir a clases durante el día. Inicialmente funcionó como una institución privada en una casa alquilada y ofrecía las modalidades de Ciclo Común de Cultura General, Bachillerato en Ciencias y Letras y Secretariado Comercial.<br><br>
+
+El 17 de enero de 1969 recibió la autorización oficial para su funcionamiento mediante el Acuerdo No. 111-E.P. Durante sus primeros años enfrentó dificultades económicas, ya que los docentes recibían salarios muy bajos e incluso algunos trabajaban de forma voluntaria. Además, contó con el importante apoyo del padre Guillermo Moore.
+
+La primera promoción estuvo formada por Secretarias Comerciales y posteriormente se graduaron Peritos Mercantiles y Bachilleres en Ciencias y Letras. Muchos de sus egresados llegaron a desempeñar cargos importantes y algunos regresaron a trabajar en la institución.<br><br>
+
+En 1983, tras la jubilación del profesor Ramón Durán Hernández, la dirección fue asumida por la profesora Esther Durán Soto. Gracias a diversas gestiones, el instituto fue oficializado en 1987, pasando a formar parte del sistema educativo público.<br>
+
+Debido al crecimiento de la matrícula, fue necesario alquilar espacios adicionales. En 1997 comenzaron las gestiones para construir un edificio propio, proyecto que se concretó en 2001 con el apoyo de instituciones como el Fondo Hondureño de Inversión Social, Bienes Nacionales y la Municipalidad de Olanchito.
+
+En 2002 el instituto inició labores en sus nuevas instalaciones, ofreciendo Ciclo Común y Bachillerato Técnico en Computación.<br><br> Ese mismo año se logró la electrificación del centro educativo y del bulevar de acceso.
+
+A lo largo de su historia, el Instituto José Trinidad Cabañas ha participado activamente en actividades cívicas y culturales, celebrando importantes aniversarios y manteniendo su compromiso de brindar educación a jóvenes y adultos, convirtiéndose en una de las instituciones educativas más importantes de Olanchito.</p>
+ 
+</div>`,
+Estructura:`<div class='card'> 
+    <h2>Estructura Fisica Del Instituto</h2> <br>
+    <p align="justify">El Instituto Oficial Polivalente “JOSE TRINIDAD CABAÑAS” funciona en su propio edificio a partir del año 2008, construido con material de concreto, hierro, aluzinc y zinc, por el FONDO HONDURENO DE INVERSION SOCIAL (FHIS), FONDOS NACIONALES Y MUNICIPALIDAD DE OLANCHITO.  
+En cuanto a las oficinas administrativas todas las dependencias son funcionales.<br>
+<b>ESPACIOS Y DEPENDENCIA DEL INSTITUTO</b><br>
+<b>Direccion espacio de gestion:</b>
+<li> Sub-direccion 
+<li> Secretaria
+<li> Administrativa<br><br>
+ <b>Espacio de Servicio  a los Estudiantes: </b>            
+ <li>	Consejería
+<li>Orientación
+  <li> 4 Baños de mujeres.
+  <li>  4 Baños de hombres.
+   <li> Luz eléctrica.<br><br>
+ <b> Espacio Recreativos :</b>
+   <li> Áreas verdes
+  <li> Patio amplio
+     <li>Acercas de Comunicación     
+ <li> Recreativos           
+   <li>3 Cafetería constituida <br><br>
+<b>Espacio Virtual con:</b>
+ <li>  Laboratorio de computación.  
+<li> Computadoras en buen estado
+ </p>
+</div>`,
+
+Fundador:`<div class='card'> 
+    <h2 Align="center">Biografia de Ramon Duran </h2> <br>
+    <center>
+    <img src='Duran.jpeg'><br><br>
+    </center>
+    <p align="justify"> El profesor Ramón Durán Hernández fue un destacado educador hondureño y fundador del Instituto José Trinidad Cabañas en la ciudad de Olanchito. En 1968 creó esta institución con el propósito de brindar oportunidades de estudio a jóvenes y adultos que, por diferentes razones, no podían asistir a clases durante el día.<br>
+        Además de ser su fundador, desempeñó el cargo de director y financió con recursos propios gran parte del material y equipo necesario para el funcionamiento del instituto. Su dedicación permitió que muchas personas de escasos recursos o con responsabilidades laborales pudieran continuar sus estudios y alcanzar una formación profesional.<br><br>
+
+El profesor Ramón Durán Hernández se jubiló en 1983, dejando la dirección en manos de la profesora Esther Durán. Posteriormente apoyó las gestiones para que el instituto fuera oficializado por el Estado hondureño, logro que se concretó en 1987. Su legado permanece como uno de los principales impulsores de la educación media en Olanchito y el departamento de Yoro.
+ </p>
+</div>`,
+
+madera:`<div class='card'><h2>Área de Madera</h2>
+<p align="justify"> Formación técnica en carpintería.<br>
+ El área de madera es un espacio de trabajo destinado al aprendizaje y desarrollo de habilidades relacionadas con el diseño, corte, ensamblaje y acabado de piezas de madera. Esta área permite a los estudiantes adquirir conocimientos prácticos sobre carpintería, uso de herramientas y normas de seguridad industrial. El area de Madera se identifica por el color de la gabacha VERDE.<br><br>
+  </p>
+
+    <div style="display: flex; gap: 2cm; flex-wrap: wrap;"> 
+    <img src='MAD.jpg'>
+    <img src='MADE.jpg'>
+    <img src='MADER.jpg'>
+    <img src='MA.jpg'>
+    <img src='MADERA1.jpg'>
+    <img src='MADERA.jpg'>
+</div><br>
+<b><h2>Herramientas Utilizadas en el Área de Madera</h2></b><br>
+<li> <b> Serrucho: </b> Se utiliza para cortar piezas de madera de forma manual.
+<li><b> Martillo:</b>Sirve para clavar y extraer clavos durante la construcción de proyectos.
+<li><b> Formón:</b>Se emplea para tallar, rebajar y realizar ranuras o cortes precisos en la madera.
+<li><b> Cepillo de carpintero:</b>Permite alisar y nivelar superficies de madera, eliminando irregularidades.
+<li><b> Escuadra:</b> Se utiliza para verificar y marcar ángulos rectos de 90 grados.
+<li><b> Cinta métrica:</b>Sirve para medir longitudes, anchos y alturas con precisión.
+<li><b> Lijadora: </b>Se emplea para suavizar superficies y eliminar imperfecciones antes del acabado final.
+<li><b> Taladro:</b>Permite perforar agujeros en la madera para tornillos, clavos u otras uniones.
+<li><b> Sierra caladora:</b>Se utiliza para realizar cortes curvos o de formas especiales en la madera.
+<li><b> Sierra circular:</b>Sirve para realizar cortes rectos de manera rápida y precisa.
+<li><b> Destornilladores:</b>Se utiliza para colocar o retirar tornillos. <br><br>
+<h4>Importancia del Uso de Gabachas:</h4>
+<p>La gabacha es un equipo de protección personal indispensable en el área de madera porque:<br>
+<li>Protege la ropa de polvo, virutas y manchas.
+<li>Reduce el riesgo de lesiones menores causadas por astillas.
+<li>Contribuye a mantener la higiene y el orden en el taller.
+<li>Promueve hábitos de seguridad y responsabilidad entre los estudiantes.
+<li>Facilita la identificación de los alumnos que trabajan dentro del taller.</p>
+    </div>`,
+electricidad:`<div class='card'><h2>Electricidad</h2>
+    <p align="justify">Capacitación en instalaciones eléctricas.</p>
+    <p>El Área de Electricidad está destinada al desarrollo de conocimientos y habilidades técnicas relacionadas con instalaciones eléctricas residenciales, comerciales e industriales. Los estudiantes realizan prácticas supervisadas que fortalecen su formación teórica y práctica, promoviendo la seguridad, la responsabilidad y el trabajo en equipo.</p><br><br>
+    <div style="display: flex; gap: 2cm; flex-wrap: wrap;"> 
+       <img src='elec.jpg'>
+       <img src='ele.jpg'>
+    <img src='electricidad.jpg'>
+     <img src='ELE0.jpg'>
+      <img src='ELEC2.jpg'>
+       <img src='elect.jpg'>
+    </div><br>
+    <h2>Herramientas Utilizadas</h2>
+<p><li><b>Multímetro digital:</b>
+Medir voltaje, corriente y resistencia en circuitos eléctricos.
+<li><b>Pinza amperimétrica:</b>
+Medir la corriente eléctrica sin necesidad de desconectar el circuito.
+<li><b>Destornilladores planos y de cruz:</b>
+Ajustar o retirar tornillos en instalaciones y equipos eléctricos
+<li><b>Alicates de corte:</b>
+Cortar cables y conductores eléctricos.
+ <li><b>Alicates de punta:</b>
+Sujetar, doblar y manipular cables en espacios reducidos.   
+  <li><b>Probador de voltaje:</b>	Verificar la presencia o ausencia de energía eléctrica.
+ <li><b>Cinta aislante:</b>		Aislar y proteger las conexiones eléctricas.
+ <li><b>Taladro eléctrico:</b>		Realizar perforaciones para la instalación de tuberías, cajas y accesorios eléctricos.
+ <li><b>Escalera de trabajo:</b>		Facilitar el acceso seguro a instalaciones ubicadas en altura.
+ <li><b>Casco de seguridad:</b>		Proteger la cabeza contra golpes o accidentes durante las prácticas.
+ <li><b>Guantes de seguridad:</b>		Proteger las manos al manipular herramientas y materiales eléctricos.
+ <li><b>Lentes de seguridad:</b>	Proteger los ojos de partículas, polvo o chispas.  </p><br><br>
+    <h2>Uso de la Gabacha</h2>
+
+<p>La gabacha color beige forma parte del uniforme de práctica del Área de Electricidad y tiene como finalidad:<br><br>
+<li>Identificar a los estudiantes de la especialidad.
+<li>Mantener una presentación ordenada y profesional.
+<li>Proteger la ropa durante las actividades prácticas.
+<li>Promover hábitos de seguridad e higiene en el taller.
+<li>Fomentar el sentido de pertenencia a la carrera técnica.<br><br>
+El uso obligatorio de la gabacha contribuye a crear un ambiente de trabajo seguro y acorde con las normas de formación técnica profesional.</p>
+    
+    
+    </div>`,
+hogar:`<div class='card'><h2>Hogar</h2> 
+    <p align="justify">Aprendizaje para el desarrollo del hogar.<br>
+        <p align="justify">El Área de Hogar está orientada al desarrollo de habilidades prácticas relacionadas con la administración del hogar, la preparación de alimentos, la nutrición, la higiene, la confección básica y la decoración. Los estudiantes adquieren conocimientos que contribuyen a su formación integral y al mejoramiento de la calidad de vida familiar y comunitaria.</p><br><br></p>
+    <div style="display: flex; gap: 2cm; flex-wrap: wrap;">
+    <img src='hogar6.jpg'>
+    <img src='HOGAR.jpg'>
+    <img src='HOGAR1.jpg'>
+    <img src='HOGAR2.jpg'>
+    <img src='hogar4.jpg'>
+    <img src='hogar5.jpg'>
+    </div><br>
+    <h2>Herramientas Utilizadas</h2>
+    <p><li><b>Cocina y horno:</b>	Preparación y cocción de alimentos.
+<li><b>Ollas y sartenes:</b>	Elaboración de diferentes recetas y prácticas culinarias.
+<li><b>Cuchillos de cocina:</b>	Cortar, picar y preparar ingredientes.
+<li><b>Tablas para cortar:</b>	Proporcionar una superficie segura e higiénica para la preparación de alimentos.
+<li><b>Licuadora:</b>	Mezclar y procesar alimentos y bebidas.
+<li><b>Batidora:</b> Preparar masas, mezclas y postres.
+<li><b>Tazas y cucharas medidoras:</b>	Medir ingredientes con precisión.
+<li><b>Máquina de coser:</b>	Elaborar y reparar prendas o artículos textiles.
+<li><b>Tijeras de costura:</b>	Cortar telas y materiales de confección.
+<li><b>Cinta métrica:</b>	Tomar medidas para trabajos de costura y diseño.
+<li><b>Agujas e hilos:</b>	Realizar costuras y acabados textiles.
+<li><b>Plancha:</b>	Eliminar arrugas y dar acabado a las prendas.</p><br><br>
+<h2>Uso de la Gabacha </h2>
+
+<p>La gabacha color azul claro forma parte del uniforme de práctica del Área de Hogar y tiene como finalidad:<br><br>
+
+<li>Identificar a los estudiantes pertenecientes al área.
+<li>Proteger la ropa durante las actividades de cocina, costura y otras prácticas.
+<li>Mantener normas de higiene y limpieza dentro de los espacios de trabajo.
+<li>Fomentar la disciplina, el orden y la responsabilidad.
+<li>Promover una imagen profesional y adecuada durante el desarrollo de las actividades prácticas.<br><br>
+
+El uso de la gabacha azul claro contribuye a mantener un ambiente de trabajo organizado, seguro e higiénico, fortaleciendo la formación integral de los estudiantes.</p></div>`,
+estructura:`<div class='card'><h2>Estructura</h2>
+    <p align="justify">Diseño y construcción estructural.</p>
+    <p>El área de Estructuras Metálicas es un taller técnico donde los estudiantes aprenden a diseñar, fabricar, ensamblar y reparar estructuras elaboradas con metales como hierro, acero y aluminio. En esta área se desarrollan habilidades relacionadas con la medición, corte, soldadura y montaje de piezas metálicas, siguiendo normas de seguridad y calidad. El area de Estructuras se identifica por el color de la gabacha AZUL OSCURO.</p><br><br>
+    <div style="display: flex; gap: 2cm; flex-wrap: wrap;">
+    <img src='estr.jpg'>
+    <img src='EST.jpg'>
+    <img src='EST1.jpg'>
+    <img src='EST2.jpg'>
+    <img src='EST3.jpg'>
+    <img src='EST4.jpg'>
+    </div><br>                                                                  
+<b>Herramientas Utilizadas en el Área de Estructuras Metalicas</b><br>
+<li><b> Soldadora eléctrica:</b>Se utiliza para unir piezas metálicas mediante calor y material de aporte. 
+<li><b>Esmeril angular (pulidora):</b>Sirve para cortar, desbastar, pulir y limpiar superficies metálicas.       
+<li><b>Taladro:</b>Permite perforar agujeros en piezas metálicas.                             
+<li><b>Cinta métrica:</b>Se utiliza para medir longitudes y dimensiones de las piezas.              
+<li><b>Escuadra metálica:</b>Sirve para verificar y marcar ángulos de 90°.                              
+<li><b>Martillo:</b>Se emplea para ajustar, golpear o dar forma a algunas piezas metálicas.    
+<li><b>Alicate:</b>Se utiliza para sujetar, doblar y cortar alambres o piezas pequeñas.       
+<li><b>Llave ajustable:</b>Permite apretar y aflojar tuercas y tornillos de diferentes tamaños.       
+<li><b>Prensa o tornillo de banco:</b>Sirve para sujetar firmemente las piezas durante el trabajo.               
+<li><b>Sierra para metal:</b>Se utiliza para cortar barras, tubos y láminas metálicas.                  
+<li><b>Punzón:</b>Permite marcar puntos de referencia antes de perforar.                     
+<li><b>Equipo de soldadura autógena: </b>Se utiliza para soldar y cortar metales mediante gases combustibles. <br><br>
+<h4>Importancia del Uso de Gabachas:</h4>
+<li>La gabacha es un equipo de protección personal indispensable en el taller de estructuras metálicas porque:<br>
+<li>Protege la ropa y el cuerpo de chispas y partículas metálicas.
+<li>Reduce el riesgo de quemaduras leves durante los procesos de soldadura.
+<li>Ayuda a mantener la higiene y el orden en el taller.
+<li>Promueve hábitos de seguridad y responsabilidad.
+<li>Facilita la identificación de los estudiantes dentro del área de trabajo.<br>
+
+Además de la gabacha, es recomendable utilizar guantes, lentes de seguridad, casco para soldar y botas de seguridad.      
+
+    </div>`,
+informatica:`<div class='card'><h2>Informática</h2> 
+    <p align="justify">Formación tecnológica y programación.<br>
+        Bachillerato Técnico Profesional en Informática
+
+El Bachillerato Técnico Profesional en Informática forma estudiantes con conocimientos en tecnologías de la información, programación, mantenimiento de computadoras, redes y desarrollo de aplicaciones. Esta carrera prepara a los jóvenes para enfrentar los retos tecnológicos actuales, desarrollando habilidades prácticas y teóricas que les permiten continuar estudios superiores o incorporarse al ámbito laboral con una sólida base técnica.<br><br></p>
+    <div style="display: flex; gap: 2cm; flex-wrap: wrap;">
+    <img src='infor.jpg'>
+    <img src='infor1.jpg'>
+    <img src='inf.png'>
+    <img src='infor2.jpg'>
+     <img src='infor3.jpg'>
+      <img src='infor4.jpg'>
+    </div><br>
+    <h2>Plan de Estudio </h2>
+    <p><li>Programación.
+<li>Diseño  web.
+<li>Producciones Digitales
+<li>Redes informáticas.
+<li>Mantenimiento y reparación de computadoras.
+<li> Gestión empresarial.</p>
+    </div>`,
+finanzas:`<div class='card'><h2>Finanzas</h2>
+    <p align="justify">Administración y contabilidad.<br>
+        El Bachillerato Técnico Profesional en Finanzas brinda a los estudiantes conocimientos en contabilidad, administración, economía y gestión financiera. Su formación permite comprender y aplicar procesos relacionados con el manejo de recursos económicos, fortaleciendo competencias que favorecen la toma de decisiones responsables y el desarrollo profesional en el área financiera y empresarial.<br><br></p>
+    <div style="display: flex; gap: 2cm; flex-wrap: wrap;"> 
+    <img src='fin.jpg'>
+    <img src='fina.jpg'>
+    <img src='finan.jpg'>
+    </div><br>
+    <h2>Plan de Estudio</h2>
+   <p><li>Contabilidad general.
+<li>Contabilidad financiera.
+<li>Administración financiera.
+<li>Matemática financiera.
+<li>Economía.
+<li>Auditoría.
+<li>Tributación.
+<li>Presupuestos.
+<li>Gestión empresarial.</p> 
+    </div>`,
+bch:`<div class='card'><h2>BCH</h2>
+    <p align="justify">Bachillerato en Ciencias y Humanidades.<br>
+        El Bachillerato en Ciencias y Humanidades ofrece una formación académica integral orientada al desarrollo del pensamiento crítico, científico y humanístico. Esta modalidad proporciona los conocimientos fundamentales en ciencias, matemáticas, comunicación y ciencias sociales, preparando a los estudiantes para continuar estudios universitarios y contribuir positivamente a la sociedad.<br><br></p>
+    <div style="display: flex; gap: 2cm; flex-wrap: wrap;"> 
+       <img src='hm.jpeg'>
+        <img src='humani.jpeg'>
+        <img src='Humanidades.jpeg'>
+        </div><br>
+        <h2>Plan de Estudio</h2>
+        <p><li>Matemáticas.
+<li>Español.
+<li>Ciencias Naturales.
+<li>Física.
+<li>Química.
+<li>Biología.
+<li>Ciencias Sociales.
+<li>Inglés.
+<li>Informática.
+<li>Orientación y emprendimiento.</p>
+        </div>`,
+electricidadc:`<div class='card'><h2> Electricidad</h2>
+<p>Formación técnica especializada en instalaciones eléctricas.<br>
+    El Bachillerato Técnico Profesional en Electricidad forma estudiantes capacitados para realizar instalaciones, mantenimiento y reparación de sistemas eléctricos, aplicando normas de seguridad y calidad. La carrera combina conocimientos teóricos y prácticos que permiten desarrollar habilidades técnicas en el área eléctrica, fomentando la responsabilidad, la innovación y la preparación para estudios superiores o el campo laboral.<br><br></p>
+<div style="display: flex; gap: 2cm; flex-wrap: wrap;"> 
+<img src='ele_carrera.jpg'>
+<img src='ele.jpg'>
+<img src='ELE0.jpg'>
+<img src='elect.jpg'>
+<img src='ele1.jpg'>
+  <img src='ELEC2.jpg'>
+    
+</div><br><br>
+<h2>Plan de Estudio</h2>
+<p><li>Instalaciones eléctricas residenciales.
+<li>Instalaciones eléctricas comerciales.
+<li>Electrónica básica.
+<li>Sistemas de control eléctrico.
+<li>Motores eléctricos.
+<li>Automatización.
+<li>Seguridad industrial.
+<li>Interpretación de planos eléctricos.
+<li>Mantenimiento eléctrico.</p>
+</div>`,
+
+madurez:`<div class='card'><h2>BCH por Madurez</h2>
+<p align="justify">Programa para jóvenes y adultos.<br><br>
+El Bachillerato en Ciencias y Humanidades por Madurez (BCH por Madurez)
+
+El Bachillerato en Ciencias y Humanidades por Madurez es una modalidad educativa dirigida a jóvenes y adultos que desean completar sus estudios de nivel medio. Su objetivo es proporcionar una formación académica integral en las áreas científicas, humanísticas y tecnológicas, permitiendo a los estudiantes desarrollar conocimientos, habilidades y valores necesarios para continuar estudios superiores, mejorar sus oportunidades laborales y contribuir al desarrollo de la sociedad.
+
+Esta modalidad se adapta a las necesidades de personas que, por diferentes circunstancias, no pudieron culminar sus estudios en la edad regular, brindándoles una oportunidad de superación personal y profesional mediante una educación de calidad.</div>`,
+matutina:`<div class='card'><h2>Matutina</h2>
+    <p align="justify">Horario de mañana.<br> De las 7:00-12:30 Am.<br>
+        La jornada matutina es el horario de clases que se desarrolla durante las horas de la mañana, generalmente desde las 7:00 a.m. hasta el mediodía. Está dirigida a estudiantes que pueden asistir al centro educativo en este período y permite aprovechar las primeras horas del día para el aprendizaje.</p></div>`,
+vespertina:`<div class='card'><h2>Vespertina</h2>
+    <p align="justify">Horario de tarde.<br> De las 12:40-5:30 Pm.<br>
+        La jornada vespertina es el horario de clases que se imparte durante la tarde, normalmente desde el mediodía hasta las últimas horas de la tarde. Esta jornada brinda una alternativa para estudiantes que, por diferentes razones, no pueden asistir en la mañana.</p></div>`,
+nocturna:`<div class='card'><h2>Nocturna</h2>
+    <p align="justify">Horario nocturno.<br>
+        La jornada nocturna es la modalidad educativa que funciona durante la noche, generalmente entre las 6:00 p.m. y las 10:00 p.m. Está orientada principalmente a jóvenes y adultos que trabajan durante el día o que desean continuar sus estudios en horarios más flexibles.<br><br>Esta jornada brinda oportunidades de superación académica a personas que desean completar su educación media, contribuyendo a su desarrollo personal, profesional y social mediante un sistema flexible y adaptado a sus necesidades.</p></div>`,
+isemed:`<div class='card'><h2>ISEMED</h2>
+    <p align="justify">Horario de Sabado y Domingo<br>
+        ISEMED (Instituto Sistema de Educación Media a Distancia) es una modalidad educativa que permite a los estudiantes cursar la educación media mediante un sistema flexible, combinando el estudio independiente con asesorías presenciales o virtuales. Está diseñada para personas que, por trabajo, distancia geográfica u otras responsabilidades, no pueden asistir regularmente a clases en una jornada tradicional.<br><br>
+        Esta modalidad busca ampliar las oportunidades educativas y facilitar la culminación de los estudios de nivel medio.</div>`,
+docentes:`<div class='card'>
+<h2>Docentes</h2>
+<p>Profesionales altamente capacitados.</p>
+<div style="display: flex; gap: 2cm; flex-wrap: wrap;">  
+    <div>
+<img src='directora.jpg'>
+<h2> Lic.Justa Spears</h2>
+<p> Directora:</p>
+</div>
+  <div>
+<img src='prof.isra3.jpg'>
+<h2> Lic.Israel Ramirez</h2>
+<p> Sub-Director:</p>
+</div>
+<div>
+<img src='prof.norma.jpg'>
+<h2> Lic.Norma Quezada</h2>
+<p> Secretaria:</p>
+</div>
+<div>
+<img src='loa.jpeg'>
+<h2> Lic.Fatima Garcia</h2>
+<p> Oficinista:</p>
+</div>
+<div>
+<img src='loany.png'>
+<h2> Lic.Loany Martinez</h2>
+<p> Operador de maquina:</p>
+</div>
+<div>
+<img src='andrea.jpg'>
+<h2> Andrea Chandia</h2>
+<p> Secretaria:</p>
+</div>
+<div>
+<img src='mayony.jpg'>
+<h2> Mayony Nuñez</h2>
+<p> Administradora:</p>
+</div>
+<div>
+<img src='prof.fatima.jpg'>
+<h2> Lic.Fatima Reyes</h2>
+<p> Consejera:</p>
+</div>
+<div>
+<img src='prof.rosy.jpg'>
+<h2> Lic.Rosibel Cruz</h2>
+<p> Orientadora:</p>
+</div>
+<div>
+<img src='prof.olga.jpg'>
+<h2> Lic.Olga Reyes</h2>
+<p> Consejera:</p>
+</div>
+<div>
+<img src='prof.oscar.jpg'>
+<h2> Lic.Oscar Hernandez</h2>
+<p> Coordinador de talleres:</p>
+</div>
+<div>
+<img src='prof.isa.jpg'>
+<h2> Lic.Isabel Cristina Reyes</h2>
+<p> Maestra del Area de Hogar:</p>
+</div>
+<div>
+<img src='frann.png'>
+<h2> Lic.Francis</h2>
+<p> Maestra del area de Hogar:</p>
+</div>
+<div>
+<img src='madera.jpeg'>
+<h2> Lic.Alejandro del Arca</h2>
+<p> Maestro del Area de Madera:</p>
+</div>
+<div>
+<img src='yobany.jpeg'>
+<h2> Lic.Yobany</h2>
+<p> Maestro del Area de Estructuras Metalicas:</p>
+</div>
+<div>
+<img src='rita.jpeg'>
+<h2> Lic.Rita Tejeda</h2>
+<p> Maestra del Area de Electricidad:</p>
+</div>
+<div>
+<img src='https://scontent.ftji1-1.fna.fbcdn.net/v/t39.30808-6/475819514_471773085988802_5099623698661285404_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=yuH6DH-nmHIQ7kNvwG_28Fr&_nc_oc=Ado_H-PKal_n8UPQ-VwR8ZRFs1sAFrTGU2yNbytMXRh7CVY6ttRk5-qXuOv9T6AxkzE&_nc_zt=23&_nc_ht=scontent.ftji1-1.fna&_nc_gid=io7N3hVlAPv2WEVvey_s3A&_nc_ss=7b289&oh=00_Af_va3aTT5vTjm0uH7PsyZaoif3OornkpBHuz18KMVV9rg&oe=6A23E2AE'>
+<h2> Lic.Edy Pastor</h2>
+<p> Maestro del Area de Electricidad:</p>
+</div>
+<div>
+<img src='claudia.jpeg'>
+<h2> Lic.Claudia Reyes</h2>
+<p> Maestra de Bachillerato de Electricidad:</p>
+</div>
+<div>
+<img src='ProfeMoncada.jpeg'>
+<h2> Lic.Daniel Moncada</h2>
+<p> Maestro de Bachillerato de Informatica:</p>
+</div>
+<div>
+<img src='prof.yolin.jpg'>
+<h2> Lic.Yolin Obed Martinez</h2>
+<p> Maestro de Bachillerato de Informatica:</p>
+</div>
+<div>
+<img src='prof.delia.jpg'>
+<h2> Lic.Delia Fuentes</h2>
+<p> Maestra del Area de Informatica:</p>
+</div>
+<div>
+<img src='profeLeo.jpeg'>
+<h2> Lic.Leonor Banegas</h2>
+<p> Coordinadora de Bachillerato de Informatica:</p>
+</div>
+<div>
+<img src='prof.chacon.jpg'>
+<h2> Lic.María Chacon</h2>
+<p> Maestra de Gestion empresarial :</p>
+</div>
+<div>
+<img src='FIAMA.jpeg'>
+<h2> Lic.Fiama Euceda</h2>
+<p> Maestra de ciclo y bachillerato:</p>
+</div>
+<div>
+<img src='prof.alba.jpg'>
+<h2> Lic.Alba Trochez</h2>
+<p> Maestra de Ciencias Naturales:</p>
+</div>
+<div>
+<img src='erika1.png'>
+<h2> Lic.Erika Lopez</h2>
+<p> Maestra de Ciencias Naturales:</p>
+</div>
+<div>
+<img src='prof.elvin.jpg'>
+<h2> Lic.Elvin Vasquez</h2>
+<p> Maestro de Ciencias Naturales:</p>
+</div>
+<div>
+<img src='yadira.jpeg'>
+<h2> Lic.Yadira Reyes</h2>
+<p> Maestra de Matematicas y Artistica:</p>
+</div>
+<div>
+<img src='https://scontent.ftji1-1.fna.fbcdn.net/v/t39.30808-6/469869780_432939116538866_2445647679214055646_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=yBwdaVn9XnMQ7kNvwFbwp5u&_nc_oc=AdqWM6Q29G6Q0AZb3HlMvGeptXevNGl2QvV-pRNOqIQr6UPsMO7nCCg_C6ZI0kzTrFQ&_nc_zt=23&_nc_ht=scontent.ftji1-1.fna&_nc_gid=AW9QKJBRZq7mR7j2ZKPd_A&_nc_ss=7a289&oh=00_Af_BTffqxcfYD6j9dUIyWE2RTqr2kGPIbsSC3ZPTttQBqg&oe=6A23F73A'>
+<h2> Lic.Ronal Munguia</h2>
+<p> Maestro de Matematicas:</p>
+</div>
+<div>
+<img src='sheyla.jpeg'>
+<h2> Lic.Sheyla Paz</h2>
+<p> Maestra de Español:</p>
+</div>
+<div>
+<img src='historia.png'>
+<h2> Lic.Edith Ramos</h2>
+<p> Maestra de Historia de Honduras :</p>
+</div>
+<div>
+<img src='ffisicaa.png'>
+<h2> Lic.Riseldy Larios</h2>
+<p> Maestra de Educacion Fisica:</p>
+</div>
+<div>
+<img src='ingles.jpeg'>
+<h2> Lic.José Andrés Soto</h2>
+<p> Mestro de Ingles:</p>
+</div>
+<div>
+<img src=''>
+<h2> Lic.Jorge Cruz </h2>
+<p> Maestro de Dibujo Tecnico:</p>
+</div>
+<div>
+<img src='sociales.jpeg'>
+<h2> Lic.Armando Montoya</h2>
+<p> Maestro de ciencias Sociales:</p>
+</div>
+<div>
+<img src='prof.donaldo.jpg'>
+<h2> Lic.Donaldo Gonzales</h2>
+<p> Maestro de Matematicas:</p>
+</div>
+
+</div>
+
+</div>`,
+};
+
+document.getElementById("contenido").innerHTML=datos[opcion];
+}
+
+function contador(id,fin){
+let n=0;
+let intervalo=setInterval(()=>{
+n++;
+document.getElementById(id).innerText=n;
+if(n==fin) clearInterval(intervalo);
+},20);
+}
+contador("num1",1394);
+contador("num2",63);
+contador("num3",5);
+
+</script>
+
+</body>
+</html>
